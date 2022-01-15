@@ -1,4 +1,4 @@
-const db = require ("../models")
+const db = require ("../models");
 
 // Rest Routes as a guide
 /*
@@ -12,8 +12,8 @@ const db = require ("../models")
  */
 
 const idx = (req, res) => {
-    db.Order.find({}. function (err, foundOrders) => {
-        if (err) return res.send (err);
+    db.Order.find({}, (err, foundOrders) => {
+        if (err) return res.send(err);
         const context = {orders: foundOrders};
         res.render("orders/index", context)
     })

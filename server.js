@@ -5,8 +5,6 @@ require("dotenv").config();
 const express = require('express');
 const methodOverride = require('method-override');
 
-
-
 /* ====== Internal Modules  ====== */
 // Required Internal Modules
 // all code that is our code
@@ -49,6 +47,10 @@ app.get("/", (req, res) => {
 app.get((req, res) => {
 	res.send("404! Error! Page not found.");
 });
+
+//Internal Routes
+app.use("/products", routes.products);
+app.use("/orders", routes.orders);
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)

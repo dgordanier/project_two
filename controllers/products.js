@@ -15,7 +15,7 @@ const idx = (req, res) => {
     db.Product.find({}, (err, foundProducts) => {
         if (err) return res.send(err);
         const context = {products: foundProducts};
-        res.render("/products", context)
+        res.render("products/index", context)
     })
 }
 
