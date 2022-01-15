@@ -51,7 +51,8 @@ app.get((req, res) => {
 //Internal Routes
 app.use("/products", routes.products);
 app.use("/orders", routes.orders);
-app.use("/customers", routes.customers);
+
+
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)

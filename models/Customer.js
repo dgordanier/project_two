@@ -14,7 +14,7 @@ const customerSchema = new Schema (
                 required: true,
                 enum: statesArray
             },
-            zip: { type: Number},
+            zip: { type: String},
         },
         billingAddress: {
             street: {type: String, required: true},
@@ -24,7 +24,7 @@ const customerSchema = new Schema (
                 uppercase: true,
                 required: true,
             },
-            zip: { type: Number},
+            zip: { type: String},
         },
         creditCard: {type: Number, required: true},
         expiration: {type: Date},
