@@ -12,7 +12,6 @@ const customerSchema = new Schema (
                 type: String,
                 uppercase: true,
                 required: true,
-                enum: statesArray
             },
             zip: { type: String},
         },
