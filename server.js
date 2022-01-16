@@ -40,7 +40,7 @@ app.set("view engine", "ejs");
 /* ====== Routes  ====== */
 //Home Route - Products Displayed Here
 app.get("/", (req, res) => {
-	res.render("index");
+	res.redirect("/products");
 });
 
 //404 Route
@@ -49,6 +49,8 @@ app.get((req, res) => {
 });
 
 //Internal Routes
+app.use("/products", routes.products);
+
 //View Cart
 // app.use("/cart", routes.cart);
 
