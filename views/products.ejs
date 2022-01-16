@@ -11,23 +11,28 @@
     </nav>
 
 <main>
-        <h2>Best Sellers</h2>
+        <h5>Best Sellers</h5>
     
     <% products.forEach(product => { %> 
-        
+        <div class="container">
+        <div class="row">
             <div class="col s12 m6 l5">
                 <div class="card horizontal">
                   <div class="card-image">
                     <img src="<%= product.imageURL %> ">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red" href="/cart/add-to-cart/ <%= product._id %> "><i class="material-icons">add</i></a>
                   </div>
                   <div class="card-content">
-                    <h5><%= product.name %> </h5> <h5><%= product.price %> </h5>
+                    <h5><%= product.name %> </h5> <h5>$ <%= product.price %> </h5>
                     <p><%= product.description %> </p>
                   </div>
                 </div>
               </div>
+        </div>
+    </div> 
     <% }) %>   
+
+
 </main>
 
 

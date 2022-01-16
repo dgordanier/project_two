@@ -1,3 +1,4 @@
+const { Product } = require("../models");
 const db = require("../models");
 
 // Rest Routes
@@ -11,8 +12,21 @@ const db = require("../models");
  * Delete - DELETE - /cart/:id  - Functional - Deletes article by id from request
  */
 
+//add to cart function
+const addToCart = (req, res) => {
+   const productId = req.params.id;
+   const cart = db.Cart.create(req.session.cart ? req.session.cart : {});
 
+    db.Product.findById(productId, function (err, product) {
+        if(err) return res.send(err);
+        cart.add(product, product.id);
+        req.session.cart = cart;
+        console.log(req.session.cart);
+        res.redirect("/products");
+    })
+
+}
 
 module.exports = {
-    
+    addToCart,
 }
