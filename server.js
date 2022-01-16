@@ -3,6 +3,7 @@ require("dotenv").config();
 // Required External Modules
 // all required code that is not our own
 const express = require('express');
+const session = require('express-session');
 const methodOverride = require('method-override');
 
 /* ====== Internal Modules  ====== */
@@ -28,7 +29,13 @@ app.use(express.static("public"));
 app.use((req, res, next) => {
 	console.log(req.url, req.method);
 	next();
-})
+});
+//session middleware
+app.use(session({
+	secret: 'secret-key',
+	resave: false,
+	saveUninitialized: false,
+}));
 
 /* ====== System Variables  ====== */
 const PORT = 4000; // full caps signify a config variable
@@ -40,7 +47,7 @@ app.set("view engine", "ejs");
 /* ====== Routes  ====== */
 //Home Route - Products Displayed Here
 app.get("/", (req, res) => {
-	res.render("index");
+	res.redirect("/products");
 });
 
 //404 Route
@@ -49,8 +56,10 @@ app.get((req, res) => {
 });
 
 //Internal Routes
+app.use("/products", routes.products);
+
 //View Cart
-// app.use("/cart", routes.cart);
+app.use("/cart", routes.cart);
 
 //Checkout
 //app.use("/orders", routes.orders);

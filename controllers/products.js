@@ -11,8 +11,16 @@ const db = require("../models");
  * Delete - DELETE - /products/:id  - Functional - Deletes article by id from request
  */
 
+const idx = (req, res) => {
+    db.Product.find({}, function (err, allProducts) {
+        if (err) return res.send(err);
+        const context = {products: allProducts};
+        return res.render("products", context);
+    });
+};
+
 
 
 module.exports = {
-  
+  idx,
 }

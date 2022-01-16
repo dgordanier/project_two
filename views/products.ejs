@@ -1,0 +1,44 @@
+<%- include('./partials/header') %>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">HDD Medsupply</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href=""><span>Products</span><i class="material-icons left">home</i></a></li>
+            <li class="active"><a href="" class="btn-floating red pulse">
+             <i class="material-icons">shopping_cart</i></a></li>
+          </ul>
+    </nav>
+
+<main>
+        <h5>Best Sellers</h5>
+    
+    <% products.forEach(product => { %> 
+        <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l5">
+                <div class="card horizontal">
+                  <div class="card-image">
+                    <img src="<%= product.imageURL %> ">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red" href="/cart/add-to-cart/ <%= product._id %> "><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <h5><%= product.name %> </h5> <h5>$ <%= product.price %> </h5>
+                    <p><%= product.description %> </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div> 
+    <% }) %>   
+
+
+</main>
+
+
+
+
+
+
+
+<%- include('./partials/footer') %>
