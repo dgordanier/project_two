@@ -11,14 +11,8 @@ const db = require ("../models");
  * Delete - DELETE - /orders/:id  - Functional - Deletes order by id from request
  */
 
-const idx = (req, res) => {
-    db.Order.find({}, (err, foundOrders) => {
-        if (err) return res.send(err);
-        const context = {orders: foundOrders};
-        res.render("orders/index", context)
-    })
-};
+
 
 module.exports = {
-    idx,
+   
 };
