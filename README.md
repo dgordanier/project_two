@@ -27,4 +27,4 @@
 
 
 ### **ERD** (created by David)
-![ERD](https://user-images.githubusercontent.com/93225314/149634581-c853dd19-2c49-43e7-88ae-2f06ef46e23f.jpg)
+![ERD drawio](https://user-images.githubusercontent.com/93225314/149642110-6fc29fd1-5c16-4fbd-ba88-6b4d402ab0fd.png)
