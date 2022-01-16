@@ -38,7 +38,7 @@ const PORT = 4000; // full caps signify a config variable
 app.set("view engine", "ejs");
 
 /* ====== Routes  ====== */
-//Home Route
+//Home Route - Products Displayed Here
 app.get("/", (req, res) => {
 	res.render("index");
 });
@@ -49,8 +49,11 @@ app.get((req, res) => {
 });
 
 //Internal Routes
-app.use("/products", routes.products);
-app.use("/orders", routes.orders);
+//View Cart
+// app.use("/cart", routes.cart);
+
+//Checkout
+//app.use("/orders", routes.orders);
 
 
 	
