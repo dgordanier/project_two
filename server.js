@@ -62,7 +62,7 @@ app.use("/products", routes.products);
 app.use("/cart", routes.cart);
 
 //Checkout
-//app.use("/orders", routes.orders);
+app.use("/orders", routes.orders);
 
 
 	
