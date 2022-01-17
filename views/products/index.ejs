@@ -23,9 +23,8 @@
                     <img src="<%= product.imageURL %> ">
                     <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" href="/cart/add-to-cart/ <%= product._id %> "><i class="material-icons">add</i></a> -->
                     <a class="btn-floating halfway-fab waves-effect waves-light red" href="/products/<%= product._id %>/edit "><i class="material-icons">edit</i></a>
-                    <!-- <a href="/cart/add-to-cart/<%= product._id%>">Add to Cart</a> -->
-                    <form action="/cart/add-to-cart/<%= product._id %>?_method=CREATE" method="POST" type="submit" value="Delete">
-                      <button class="btn waves-effect waves-light">Add To Cart
+                    <form action="/cart" method="POST">
+                      <button type="submit" action="/cart" method="POST" class="btn waves-effect waves-light">Add To Cart
                           <!-- <i class="material-icons right">delete_forever</i> -->
                       </button>
                   </form>

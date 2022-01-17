@@ -14,25 +14,22 @@ const db = require("../models");
 
 //add to cart function
 const addToCart = (req, res) => {
-   const productId = req.params.id;
-   const cart = db.Cart.create(req.session.cart ? req.session.cart : {});
+    console.log("Hello")
+    const productId = req.params.id;
+    console.log(productId);
+    //const cart = db.Cart.create(req.session.cart ? req.session.cart : {});
 
-    db.Product.findById(productId, function (err, product) {
-        if(err) return res.send(err);
-        cart.add(product, product.id);
-        req.session.cart = cart;
-        console.log(req.session.cart);
-        res.redirect("/products");
-    })
+    // db.Product.findById(productId, function (err, product) {
+    //     if(err) return res.send(err);
+    //     cart.add(product, product.id);
+    //     req.session.cart = cart;
+    //     console.log(req.session.cart);
+    //     res.redirect("/products");
+    // })
 
 }
 
-const postToCart = (req, res) => {
-    // const productId = req.params.id;
 
-    // db.Product.post('/cart')
-    console.log("Postiing to CART ")
-}
 
 module.exports = {
     addToCart,
