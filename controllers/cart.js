@@ -27,6 +27,13 @@ const addToCart = (req, res) => {
 
 }
 
+const postToCart = (req, res) => {
+    // const productId = req.params.id;
+
+    // db.Product.post('/cart')
+    console.log("Postiing to CART ")
+}
+
 module.exports = {
     addToCart,
 }
