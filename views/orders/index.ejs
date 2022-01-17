@@ -23,6 +23,9 @@
           <div class="row">
               <div class="col s12 m6 l5">
                   <div class="card horizontal">
+                    <div class="card-image">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
+                    </div>
                     <div class="card-image">                     
                     </div>
                     <div class="card-content">
@@ -30,62 +33,52 @@
                         <h5>Name</h5>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input placeholder="" id="full_name" type="text" name="name">
-                                <label for="full_name" class="active">Full Name</label>
+                                <h6><%= order.name %></h6>
                             </div>
                         </div>    
             
                         <h5>Email</h5>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" type="text" name="email">
-                                <label for="email" class="active">example@website.com</label>
+                                <h6><%= order.email %></h6>
                             </div>
                         </div>
             
                         <h5>Address</h5>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="street" type="text" name="street">
-                                <label for="street" class="active">Street</label>
+                                <h6>Street: <%= order.street %></h6>
                             </div>
             
                             <div class="input-field col s6">
-                                <input id="unit" type="text" name="unit">
-                                <label for="unit" class="active">Unit/Apt (optional)</label>
+                                <h6>Unit: <%= order.unit %></h6>
                             </div>
-            
+                            
                             <div class="input-field col s6">
-                                <input id="city" type="text" name="city">
-                                <label for="city" class="active">City</label>
+                                <h6>City: <%= order.city %></h6>
                             </div>
             
-                            <div class="input-field col s2">
-                                <input id="state" type="text" name="state">
-                                <label for="state" class="active">State</label>
+                            <div class="input-field col s3">
+                                <h6>State: <%= order.state %></h6>
                             </div>
             
-                            <div class="input-field col s4">
-                                <input id="zip" type="text" name="zip">
-                                <label for="zip" class="active">Zip Code</label>
+                            <div class="input-field col s3">
+                                <h6>Zip: <%= order.zip %></h6>
                             </div>
                         </div>
             
                         <h5>Payment Information</h5>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="cardNumber" type="number" name="cardNumber">
-                                <label for="cardNumber" class="active">Card Number</label>
+                                <h6>Credit Card Number: <%= order.cardNumber %></h6>
                             </div>
             
                             <div class="input-field col s3">
-                                <input id="exp" type="text" name="exp">
-                                <label for="exp" class="active">Expiration</label>
+                                <h6>Expiration: <%= order.exp; %></h6>
                             </div>
             
                             <div class="input-field col s3">
-                                <input id="cvv" type="number" name="cvv">
-                                <label for="zip" class="active">CVV</label>
+                                <h6>CVV: <%= order.cvv %></h6>
                             </div>
                         </div>          
                       </div>

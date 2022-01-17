@@ -14,27 +14,17 @@
          
     <div class="input-field">
         <div class="row">
-            <form class="col s12" action="/products/<%= product._id %>?_method=PUT" method="POST">
+            <form class="col s12" action="/order/<%= order._id %>?_method=PUT" method="POST">
               <div class="row">
 
                     <div class="input-field col s6">
                     <input placeholder="" id="first_name" type="text" name="name">
-                    <label for="first_name" class="active"><%= product.name %> </label>
-                    </div>
-
-                    <div class="input-field col s6">
-                    <input id="last_name" type="text" name="price">
-                    <label for="last_name" class="active"><%= product.price %> </label>
-                    </div>
-               
-                    <div class="input-field col s6">
-                    <input id="textarea1" type="text" name="description">
-                    <label for="textarea1" class="active"> <%= product.description %> </label>
+                    <label for="first_name" class="active"><%= order.name %> </label>
                     </div>
                   
               </div>
 
-            <button class="btn waves-effect waves-light" type="submit" value="Update" action="/products/<%= product._id %>?_method=PUT" method="POST">Submit
+            <button class="btn waves-effect waves-light" type="submit" value="Update" action="/orders/<%= order._id %>?_method=PUT" method="POST">Submit
                 <i class="material-icons right">send</i>
             </button>
                   
@@ -43,7 +33,7 @@
     </div>
 
     
-            <form action="/products/<%= product._id %>?_method=DELETE" method="POST" type="submit" value="Delete">
+            <form action="/orders/<%= order._id %>?_method=DELETE" method="POST" type="submit" value="Delete">
                 <button class="btn waves-effect waves-light">Delete
                     <i class="material-icons right">delete_forever</i>
                 </button>
