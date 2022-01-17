@@ -28,7 +28,7 @@ const newProduct = (req, res) => {
 const create = (req, res) => {
     db.Product.create(req.body, function(err, createdProduct) {
       if(err) return res.send(err);
-      return res.redirect("/products/index");
+      return res.redirect("/products");
     });
 };
 
@@ -45,15 +45,20 @@ const edit = (req, res) => {
 const update = (req, res) => {
   db.Product.findByIdAndUpdate(
         req.params.id,
+       
         {
           $set: {
-            ...req.body,
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description
           },
         },
         {new: true},
+       
         (err, updatedProduct) => {
           if(err) return res.send(err);
-          return res.redirect(`/products/edit/${updatedProduct._id}`);
+         
+          return res.redirect(`/products/`);
         }
   );
 };
@@ -62,7 +67,7 @@ const update = (req, res) => {
 const destroy = (req, res) => {
   db.Product.findByIdAndDelete(req.params.id, (err, deletedProduct) => {
     if(err) return res.send(err);
-    console.log(deletedProduct);
+    return res.redirect("/products")
   });
 };
 
