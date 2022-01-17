@@ -58,9 +58,6 @@ app.get((req, res) => {
 //Internal Routes
 app.use("/products", routes.products);
 
-//View Cart
-app.use("/cart", routes.cart);
-
 //Checkout
 app.use("/orders", routes.orders);
 

@@ -61,7 +61,7 @@ const update = (req, res) => {
           (err, updatedOrder) => {
             if(err) return res.send(err);
            
-            return res.redirect(`/orders/`);
+            return res.redirect("/orders");
           }
     );
   };
