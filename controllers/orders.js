@@ -11,8 +11,74 @@ const db = require ("../models");
  * Delete - DELETE - /orders/:id  - Functional - Deletes order by id from request
  */
 
+// index route
+const idx = (req, res) => {
+    db.Order.find({}, function (err, allOrders) {
+        if (err) return res.send(err);
+        const context = {orders: allOrders};
+        return res.render("orders/index", context);
+    });
+};
 
+//new order page
+const newOrder = (req, res) => {
+    res.render("orders/new");
+  };
+
+//create order function
+const create = (req, res) => {
+    db.Order.create(req.body, function(err, createdOrder) {
+      if(err) return res.send(err);
+      return res.redirect("/orders");
+    });
+};
+
+//edit order function
+const edit = (req, res) => {
+    db.Order.findById(req.params.id, (err, foundOrder) => {
+      if(err) return res.send(err);
+      const context = {order: foundOrder};
+      return res.render("orders/edit", context);
+    });
+  };
+
+//update order function
+const update = (req, res) => {
+    db.Order.findByIdAndUpdate(
+          req.params.id,
+         
+          {
+            $set: {
+                cart: req.body.cart,
+                name: req.body.name,
+                email: req.body.email,
+                address: req.body.address,
+                paymentId: req.id.paymentId,
+            },
+          },
+          {new: true},
+         
+          (err, updatedOrder) => {
+            if(err) return res.send(err);
+           
+            return res.redirect(`/orders/`);
+          }
+    );
+  };
+
+//delete order function
+const destroy = (req, res) => {
+    db.Order.findByIdAndDelete(req.params.id, (err, deletedOrder) => {
+      if(err) return res.send(err);
+      return res.redirect("/orders")
+    });
+  };
 
 module.exports = {
-   
+   idx, 
+   new: newOrder,
+   create,
+   edit,
+   update,
+   destroy,
 };
