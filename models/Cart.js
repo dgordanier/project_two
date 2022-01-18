@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const cartSchema = new Schema (
     {
       items: [{
-        itemName: {type: String},
-        itemPrice: {type: Number}
+        itemName: String,
+        itemPrice: Number,
+        itemDescription: String,
+        itemImageURL: String
       }],
-      //totalQuantity: {type: Number},
-      //totalPrice: {type: Number},
     },
     {
         timestamps: true,

@@ -1,3 +1,4 @@
+const { cart } = require(".");
 const { Product } = require("../models");
 const db = require("../models");
 
@@ -19,39 +20,56 @@ const addToCart = (req, res) => {
     let cartItemId = ""
 
 
-    db.Cart.create(req.body, function (err, objectCreated){
-        if (err) return res.send(err);
-        if (objectCreated){
-            cartItemId = objectCreated._id;
-            return cartItemId;
-        } 
-    });
+   
 
     
-    console.log(productId);
    
 
     db.Product.findById(productId, function (err, product){
         
         if(err) return res.send(err);
         if(product){
-            db.Cart.findByIdAndUpdate(
-                cartItemId,
-                { 
-                    $push: { 
-                        items: {
-                        "name" : "Hasan",
-                        "price" : product.price,
-                        }  
-                    } 
-                },
 
-                (err, updatedProduct) => {
-                    if(err) return res.send(err);
+            console.log(product)
+
+            // db.Cart.create(product.body, function (err, objectCreated){
+            //     if (err) return res.send(err);
+            //     if (objectCreated){
+            //         cartItemId = objectCreated._id;
+            //         // console.log(cartItemId);
+            //         db.Cart.findByIdAndUpdate({_id: cartItemId}, {$push:{items:product.body}}, {new: true}, (err, doc) => {
+            //             if(err){
+            //                 console.log(err)
+            //             }
+            //             console.log(doc)
+            //         })
+            //         // db.Cart.findByIdAndUpdate( function (err, objectUpdated){
+            //         //     {_id:cartItemId},
+            //         //     {
+            //         //         $push:{
+            //         //             items:product
+            //         //         }
+            //         //     })
+            //         // }
+                        
+            //         // if(!err) return res.send("success");
+            //     } 
+            // });
+            // console.log(cartItemId);
+            // db.Cart.findByIdAndUpdate(
+            //     {_id: cartItemId},
+            //     { 
+            //         $push: { 
+            //             items: product
+            //         } 
+            //     },
+
+            //     (err, updatedProduct) => {
+            //         if(err) return res.send(err);
                    
-                    // return res.redirect();
-                  }
-            )
+            //         // return res.redirect();
+            //       }
+            // )
         };
     });
 
