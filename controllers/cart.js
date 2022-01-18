@@ -16,7 +16,45 @@ const db = require("../models");
 const addToCart = (req, res) => {
     console.log("Hello")
     const productId = req.params.id;
+    let cartItemId = ""
+
+
+    db.Cart.create(req.body, function (err, objectCreated){
+        if (err) return res.send(err);
+        if (objectCreated){
+            cartItemId = objectCreated._id;
+            return cartItemId;
+        } 
+    });
+
+    
     console.log(productId);
+   
+
+    db.Product.findById(productId, function (err, product){
+        
+        if(err) return res.send(err);
+        if(product){
+            db.Cart.findByIdAndUpdate(
+                cartItemId,
+                { 
+                    $push: { 
+                        items: {
+                        "name" : "Hasan",
+                        "price" : product.price,
+                        }  
+                    } 
+                },
+
+                (err, updatedProduct) => {
+                    if(err) return res.send(err);
+                   
+                    // return res.redirect();
+                  }
+            )
+        };
+    });
+
     //const cart = db.Cart.create(req.session.cart ? req.session.cart : {});
 
     // db.Product.findById(productId, function (err, product) {

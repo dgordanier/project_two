@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 
 const cartSchema = new Schema (
     {
-      items: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
+      items: [{
+        itemName: {type: String},
+        itemPrice: {type: Number}
+      }],
       //totalQuantity: {type: Number},
       //totalPrice: {type: Number},
     },
