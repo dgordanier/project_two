@@ -3,7 +3,7 @@ const ctrl = require("../controllers");
 
 
 router.get("/", ctrl.orders.idx);
-router.get("/new", ctrl.orders.new);
+router.get("/new", ctrl.orders.newOrder);
 router.post("/", ctrl.orders.create);
 router.delete("/:id", ctrl.orders.destroy);
 router.put("/:id", ctrl.orders.update);
