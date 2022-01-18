@@ -49,7 +49,16 @@ const update = (req, res) => {
         
         {
           $set: {
-            ...req.body,
+            name: req.body.name,
+            email: req.body.email,
+            street: req.body.street,
+            unit: req.body.unit,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            cardNumber: req.body.cardNumber,
+            exp: req.body.exp,
+            cvv: req.body.cvv,
           },
         },
         {new: true},

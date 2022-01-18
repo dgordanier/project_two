@@ -5,6 +5,8 @@
           <a href="#" class="brand-logo">HDD Medsupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
+            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
+            <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
             <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
           
           </ul>
@@ -19,17 +21,19 @@
 			<% } %>
 			<ul>
 				<% orders.forEach(order => { %> 
-          <div class="container">
-          <div class="row">
-              <div class="col s12 m6 l5">
-                  <div class="card horizontal">
-                    <div class="card-image">
+                <div class="container">
+                <div class="row">
+                <div class="card horizontal">
                         <a class="btn-floating halfway-fab waves-effect waves-light red" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
-                    </div>
-                    <div class="card-image">                     
-                    </div>
+                    
                     <div class="card-content">
-                      <div class="col s12">
+                        <h5>Order Number</h5>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h6><%= order._id %></h6>
+                            </div>
+                        </div> 
+
                         <h5>Name</h5>
                         <div class="row">
                             <div class="input-field col s12">
@@ -79,10 +83,9 @@
             
                             <div class="input-field col s3">
                                 <h6>CVV: <%= order.cvv %></h6>
-                            </div>
-                        </div>          
-                      </div>
+                            </div>        
                     </div>
+
                   </div>
                 </div>
           </div>
