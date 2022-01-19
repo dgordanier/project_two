@@ -5,6 +5,27 @@
     "express": "^4.17.2",
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
+    "mongoose": "^6.1.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project_two",
+  "description": "### **User Story**   * As a user *or* AAU: I want to browse a list of pupular/suggested products that I can view to order   * AAU: I want to review item description and add items to my cart   * AAU: I want to checkout as a guest and not be required to create an account   * AUU: I want to quickly navigate to my cart when I am ready to check out   * AUU: I want to be able to return to products and add additional items during the checkout process   * AAU: I want to enter my debit/credit card information to pay for my items   * AAU: I want to return to home page after order has processed",
+  "version": "1.0.0",
+  "main": "seed.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgordanier/project_two.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgordanier/project_two/issues"
+  },
+  "homepage": "https://github.com/dgordanier/project_two#readme"
+=======
     "mongoose": "^6.1.6",
     "node": "^17.3.1"
   }
