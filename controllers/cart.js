@@ -17,8 +17,10 @@ const db = require("../models");
 const addToCart = (req, res) => {
     console.log("Hello")
     const productId = req.params.id;
+    console.log(productId)
     // let cartItemId = ""
 
+    
 
    
 
