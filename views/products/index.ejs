@@ -13,18 +13,6 @@
 
 <main>
         
-  <% 
-  function addToCart(name, price){
-    console.log(name + price)
-    let cart = {
-      name = product.name,
-      price = product.price,
-      qty = 0
-    }
-
-
-  }
-  %> 
     
     <% products.forEach(product => { %> 
         <div class="container">
@@ -36,8 +24,6 @@
                     <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" href="/cart/add-to-cart/ <%= product._id %> "><i class="material-icons">add</i></a> -->
 
                     <a class="btn-floating halfway-fab waves-effect waves-light red" href="/products/<%= product._id %>/edit "><i class="material-icons">edit</i></a>
-                    <button onclick="addToCart(product.name, product.price)"">Add to Cart</button>
-                    
                     <form action="/cart/<%= product._id%>" method="POST">
                       <button type="submit" action="/cart/<%= product._id%>" method="POST" class="btn waves-effect waves-light">Add To Cart
                           <!-- <i class="material-icons right">delete_forever</i> -->
