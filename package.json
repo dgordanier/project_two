@@ -25,8 +25,4 @@
     "url": "https://github.com/dgordanier/project_two/issues"
   },
   "homepage": "https://github.com/dgordanier/project_two#readme"
-=======
-    "mongoose": "^6.1.6",
-    "node": "^17.3.1"
-  }
 }
