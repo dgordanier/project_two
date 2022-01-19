@@ -44,7 +44,7 @@ const edit = (req, res) => {
 
 //update order function
 const update = (req, res) => {
-  db.Order.findByIdAndUpdate(
+  db.Order.findOneAndUpdate(
         req.params.id,
         
         {
