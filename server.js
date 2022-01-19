@@ -38,7 +38,7 @@ app.use(session({
 }));
 
 /* ====== System Variables  ====== */
-const PORT = 4000; // full caps signify a config variable
+// full caps signify a config variable
 
 /* ====== App Configuration  ====== */
 // app.set
@@ -65,6 +65,6 @@ app.use("/orders", routes.orders);
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)
-app.listen(PORT, function () {
+app.listen(process.env.PORT || 5000, function () {
 	console.log(`All systems are a go on port http://localhost:${PORT}`);
 });
