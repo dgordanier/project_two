@@ -76,12 +76,11 @@ app.get((req, res) => {
 
 //Internal Routes
 app.use("/products", routes.products);
-// app.use("/informations", routes.informations);
+app.use("/informations", require("./routes/informations"));
+
 
 //Checkout
 app.use("/orders", routes.orders);
-
-// app.use("/", routes.cart)
 
 app.use('/cart/:id', function(req, res, next){
     res.cookie('productId', req.params.id);

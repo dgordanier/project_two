@@ -7,3 +7,6 @@ const showAllInformations = (req,res) => {
     })
 }
 
+module.exports = {
+    showAll: showAllInformations,
+}
