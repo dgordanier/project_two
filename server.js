@@ -5,8 +5,14 @@ require("dotenv").config();
 const express = require('express');
 const session = require('express-session');
 const methodOverride = require('method-override');
+//newcode by Hasan
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const path = require('path');
+
 const cookieSession = require('cookie-session')
 var cookieParser = require('cookie-parser')
+
 
 /* ====== Internal Modules  ====== */
 // Required Internal Modules
@@ -22,6 +28,9 @@ const app = express();
 /* ====== Middleware  ====== */ 
 //(app.use)
 //body data
+//newcode by Hasan
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.urlencoded({extended: true}));
 //method override
 app.use(methodOverride("_method"));
@@ -67,6 +76,7 @@ app.get((req, res) => {
 
 //Internal Routes
 app.use("/products", routes.products);
+app.use("/informations", routes.informations);
 
 //Checkout
 app.use("/orders", routes.orders);
