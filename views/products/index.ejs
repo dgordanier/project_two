@@ -2,7 +2,7 @@
 <body>
     <nav>
         <div class="nav-wrapper deep-purple lighten-1">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+          <a href="#" class="brand-logo" id="headtitle">HDD MedSupply</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
             <i class="fas fa-bars"></i>
           </a>
@@ -15,13 +15,13 @@
 
 <main>
     <div class="row">
-    <h3 class="center">Products</h3>
+    <h3 class="center" id="text">Products</h3>
     </div>
 
 <section>
     <div class="row">
           <% products.forEach(product => { %> 
-      <div class="container">
+      <div class="container" id="text">
             <div class="col s12 m6 l5">
                 <div class="card horizontal">
                   <div class="card-image">
@@ -41,20 +41,10 @@
     </div>   
 </section>
 
-<footer class="page-footer deep-purple darken-1">
-  <div class="container">
-    <div class="row">
-      <div class="col 16 s12">
-        <h5><i class="material-icons">contact_phone</i>  Contact Us</h5>
-        <p>Email: xxxxxxxx@gmail.com</p>
-        <p>Phone: (XXX)XXX-XXXX </p>
-        <h5 class="center">Thank you for shopping with us!</h5>
-      </div>
-    </div>
-  </div>
 
-</footer>
+
+
+
 
 </main>
-
 <%- include('../partials/footer') %>

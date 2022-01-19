@@ -5,3 +5,11 @@
 #productcards{
     font-size: 15px;
 }
+
+#headtitle {
+    font-family: 'Cardo', serif;
+}
+
+#text{
+    font-family: 'Source Sans Pro', sans-serif;
+}
