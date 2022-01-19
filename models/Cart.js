@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 const cartSchema = new Schema (
     {
-      items: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
-      totalQuantity: {type: Number},
-      totalPrice: {type: Number},
+      items: [{
+        itemName: String,
+        itemPrice: Number,
+        itemDescription: String,
+        itemImageURL: String
+      }],
     },
     {
         timestamps: true,
