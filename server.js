@@ -14,6 +14,7 @@ const routes = require("./routes");
 /* ====== Instanced Module  ====== */
 // Create the Express app
 const app = express();
+const PORT = process.env.PORT || 5000;
 // returns an object that is our server
 
 	
@@ -65,6 +66,6 @@ app.use("/orders", routes.orders);
 	
 /* ====== Server bind  ====== */
 // bind the application to the port via app.listen(number, optional function to do after bind)
-app.listen(process.env.PORT || 5000, function () {
+app.listen(PORT, function () {
 	console.log(`All systems are a go on port http://localhost:${PORT}`);
 });
