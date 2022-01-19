@@ -116,5 +116,6 @@
   "bugs": {
     "url": "https://github.com/dgordanier/project_two/issues"
   },
-  "homepage": "https://github.com/dgordanier/project_two#readme"
+  "homepage": "https://github.com/dgordanier/project_two#readme",
+  "devDependencies": {}
 }
