@@ -1,53 +1,58 @@
 <%- include('../partials/header') %>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+        <div class="nav-wrapper deep-purple lighten-1">
+          <a href="#" class="brand-logo" id="headtitle">HDD MedSupply</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="fas fa-bars"></i>
+          </a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
             <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
             <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
-         
           </ul>
     </nav>
 
 <main>
-        
-    
-    <% products.forEach(product => { %> 
-        <div class="container">
-        <div class="row">
+    <div class="row">
+    <h3 class="center" id="text">Products</h3>
+    </div>
+
+<section>
+    <div class="row">
+          <% products.forEach(product => { %> 
+      <div class="container" id="text">
             <div class="col s12 m6 l5">
                 <div class="card horizontal">
                   <div class="card-image">
                     <img src="<%= product.imageURL %> ">
-                    <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" href="/cart/add-to-cart/ <%= product._id %> "><i class="material-icons">add</i></a> -->
 
-                    <a class="btn-floating halfway-fab waves-effect waves-light red" href="/products/<%= product._id %>/edit "><i class="material-icons">edit</i></a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light purple right" href="/products/<%= product._id %>/edit "><i class="material-icons">edit</i></a>
+
                     <form action="/cart/<%= product._id%>" method="POST">
                       <button type="submit" action="/cart/<%= product._id%>" method="POST" class="btn waves-effect waves-light">Add To Cart
                           <!-- <i class="material-icons right">delete_forever</i> -->
                       </button>
                   </form>
+
                   </div>
                   <div class="card-content">
-                    <h5><%= product.name %> </h5> <h5>$ <%= product.price %> </h5>
+                    <h5><%= product.name %> </h5> 
+                    <i class="material-icons">attach_money</i><span id="productcards"><%= product.price %></span>
                     <p><%= product.description %> </p>
                     
                   </div>
                 </div>
               </div>
-        </div>
-    </div> 
-    <% }) %>   
+          </div> 
+      <% }) %>
+    </div>   
+</section>
+
+
+
+
 
 
 </main>
-
-
-
-
-
-
-
 <%- include('../partials/footer') %>

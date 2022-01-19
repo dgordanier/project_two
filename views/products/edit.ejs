@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+        <div class="nav-wrapper deep-purple lighten-1">
+            <a href="#" class="brand-logo" id="headtitle">HDD MedSupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
             
@@ -18,42 +18,38 @@
               <div class="row">
 
                     <div class="input-field col s6">
-                    <input placeholder="" id="first_name" type="text" name="name">
-                    <label for="first_name" class="active"><%= product.name %> </label>
+                    <input placeholder="" id="first_name" type="text" name="name" value="<%= product.name %> ">
+                    <label for="first_name" class="active"> </label>
                     </div>
 
                     <div class="input-field col s6">
-                    <input id="last_name" type="text" name="price">
-                    <label for="last_name" class="active"><%= product.price %> </label>
+                    <input id="last_name" type="text" name="price" value="<%= product.price %> ">
+                    <label for="last_name" class="active"> </label>
                     </div>
                
                     <div class="input-field col s6">
-                    <input id="textarea1" type="text" name="description">
-                    <label for="textarea1" class="active"> <%= product.description %> </label>
+                    <input id="textarea1" type="text" name="description" value="<%= product.description %> ">
+                    <label for="textarea1" class="active">  </label>
                     </div>
                   
               </div>
 
-            <button class="btn waves-effect waves-light" type="submit" value="Update" action="/products/<%= product._id %>?_method=PUT" method="POST">Submit
+            <input class="btn waves-effect waves-light" type="submit">
                 <i class="material-icons right">send</i>
-            </button>
+            </input>
                   
             </form>
         </div>
     </div>
 
-    
             <form action="/products/<%= product._id %>?_method=DELETE" method="POST" type="submit" value="Delete">
                 <button class="btn waves-effect waves-light">Delete
                     <i class="material-icons right">delete_forever</i>
                 </button>
             </form>
-   
-           
-            
+
+ 
        
 
 </main>
-
-
 <%- include('../partials/footer') %>
