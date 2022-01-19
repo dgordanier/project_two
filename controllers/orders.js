@@ -22,8 +22,8 @@ const idx = (req, res) => {
 
 //new order page
 const newOrder = (req, res) => {
-    res.render("orders/new");
-  };
+  res.render("orders/new");
+};
 
 //create order function
 const create = (req, res) => {
@@ -35,48 +35,53 @@ const create = (req, res) => {
 
 //edit order function
 const edit = (req, res) => {
-    db.Order.findById(req.params.id, (err, foundOrder) => {
-      if(err) return res.send(err);
-      const context = {order: foundOrder};
-      return res.render("orders/edit", context);
-    });
-  };
+  db.Order.findById(req.params.id, (err, foundOrder) => {
+    if(err) return res.send(err);
+    const context = {order: foundOrder};
+    return res.render("orders/edit", context);
+  });
+};
 
 //update order function
 const update = (req, res) => {
-    db.Order.findByIdAndUpdate(
-          req.params.id,
-         
-          {
-            $set: {
-                cart: req.body.cart,
-                name: req.body.name,
-                email: req.body.email,
-                address: req.body.address,
-                paymentId: req.id.paymentId,
-            },
+  db.Order.findByIdAndUpdate(
+        req.params.id,
+        
+        {
+          $set: {
+            name: req.body.name,
+            email: req.body.email,
+            street: req.body.street,
+            unit: req.body.unit,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            cardNumber: req.body.cardNumber,
+            exp: req.body.exp,
+            cvv: req.body.cvv,
           },
-          {new: true},
-         
-          (err, updatedOrder) => {
-            if(err) return res.send(err);
-           
-            return res.redirect(`/orders/`);
-          }
-    );
-  };
+        },
+        {new: true},
+        
+        (err, updatedOrder) => {
+          if(err) return res.send(err);
+          
+          return res.redirect("/orders");
+        }
+  );
+};
 
 //delete order function
 const destroy = (req, res) => {
-    db.Order.findByIdAndDelete(req.params.id, (err, deletedOrder) => {
-      if(err) return res.send(err);
-      return res.redirect("/orders")
-    });
-  };
+  db.Order.findByIdAndDelete(req.params.id, (err, deletedOrder) => {
+    if(err) return res.send(err);
+    return res.redirect("/orders")
+  });
+};
 
 module.exports = {
    idx, 
-   new: newOrder,
+   newOrder,
    create,
    edit,
    update,
