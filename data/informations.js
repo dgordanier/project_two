@@ -1,9 +1,11 @@
+const { info } = require("console")
+
 const informations = [
     {
         name: 'Surgical Masks',
         AKA: 'medical face masks',
         // image: 'https://top10animal.com/wp-content/uploads/2021/06/Ebh1LYEWkAIY2Yt.jpg',
-        origin : 'Europe',
+        origin: 'Europe',
         info: 'Face masks for use in surgery were developed in Europe by several physicians, including Jan Mikulicz-Radecki at the University of Breslau and Paul Berger in Paris, in the late nineteenth century, as a result of increasing awareness of germ theory and the importance of antiseptic procedures in medicine.[40] In response to a pneumonic plague in Manchuria and Mongolia in 1910, Chinese-Malaysian epidemiologist Dr. Wu Lien-teh greatly improved on the designs he had seen in Europe to develop a face mask of layers of gauze and cotton that would protect both the wearer and others. Modern surgical masks began to be used in the 1960s. Their adoption caused cloth facemasks, which had been used since the late 19th century, to completely fall out of use in the developed world.[41][42] However, cloth masks and surgical masks both continued to be used in countries',
     },
     {
@@ -45,5 +47,5 @@ const informations = [
 ]
 
 module.exports = {
-    snails,
+    informations,
 }
