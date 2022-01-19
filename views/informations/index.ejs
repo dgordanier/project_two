@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+    <h1 class="information-header">Information about our products</h1>
+    <a href="/products">Back to products</a>
+    <h1>Information</h1>
+    <div class="information-div">
+        <% informations.forEach((information, i) => { %>
+            <div class="informationParade">
+                <h4><%= information.name %></h4>
+                <!-- <a href="/informations/<%= i %>"> -->
+                    <img src=<%= information.AKA %> alt=<%=information.name%>></img>
+                </a>
+            </div>
+        <% }) %>
+        </div>  
+</body>
+</html>
