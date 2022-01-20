@@ -7,12 +7,6 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 //newcode by Hasan
 const bodyParser = require('body-parser');
-const fs = require('fs');
-const path = require('path');
-
-const cookieSession = require('cookie-session')
-var cookieParser = require('cookie-parser')
-
 
 /* ====== Internal Modules  ====== */
 // Required Internal Modules
@@ -48,13 +42,6 @@ app.use((req, res, next) => {
 // 	saveUninitialized: false,
 // }));
 
-app.use(cookieSession({
-	name: 'session',
-	keys: ["session"],
-  
-	// Cookie Options
-	maxAge: 24 * 60 * 60 * 1000 // 24 hours
-}))
 
 /* ====== System Variables  ====== */
 const PORT = 4000; // full caps signify a config variable
@@ -82,11 +69,6 @@ app.use("/informations", require("./routes/informations"));
 //Checkout
 app.use("/orders", routes.orders);
 
-app.use('/cart/:id', function(req, res, next){
-    res.cookie('productId', req.params.id);
-    res.redirect("/products");
-    next();
-})
 
 	
 /* ====== Server bind  ====== */
