@@ -32,14 +32,14 @@ const informations = [
     {
         name: 'Oxygen Cylinder',
         AKA: 'Oxygen',
-        
+        image: 'https://www.4mdmedical.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/1/0/1005560-oxygen-complete-standard-system-600.jpg',
         origin: 'England',
         info: "An oxygen tank is an oxygen storage vessel, which is either held under pressure in gas cylinders, or as liquid oxygen in a cryogenic storage tank.",
     },
     {
         name: 'Lab Coats',
         AKA: 'Medical gown',
-        // image: 'https://inaturalist-open-data.s3.amazonaws.com/photos/11315809/large.jpg',
+        image: 'https://cdn.shopify.com/s/files/1/0139/8942/products/Women-Catarina-Scrub-Top_pacificblue-1_750x750.jpg?v=1637373034',
         origin: 'unknown',
         info: 'Lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean.',
     },
