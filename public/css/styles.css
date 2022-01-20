@@ -24,3 +24,14 @@
 #end {
     text-align: center;
 }
+
+#img {
+    
+    width: 20%;
+    margin-left: 40%;
+    position: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+  

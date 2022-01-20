@@ -11,21 +11,21 @@ const informations = [
     {
         name: 'Medical Gloves',
         AKA: 'Latex and nitrile gloves',
-        // image: 'https://a-z-animals.com/media/2019/11/Giant-African-land-snail-on-hand.jpg',
+        image: 'https://i.imgur.com/qp4gIvC.jpg',
         origin: 'United States',
         info: 'William Stewart Halsted, The Johns Hopkins Hospitals first surgeon in chief, is widely credited as the first to develop and introduce rubber surgical gloves in the United States. That was in 1894, five years after the institution opened.Now, in an effort to make medical care safer for patients and health care workers, The Johns Hopkins Hospital has become the first major medical institution to become “latex safe” by ending all use of latex gloves and almost all medical latex products.',
     },
     {
         name: 'N95 respirator',
         AKA: 'KN95',
-        // image: 'https://www.aquariadise.com/wp-content/uploads/2020/03/rabbit-snail.jpg',
+        image: 'https://i.imgur.com/EiKLrcX.jpg',
         origin: 'United States',
         info: 'An N95 filtering facepiece respirator, commonly abbreviated N95 respirator is a particulate-filtering facepiece respirator that meets the U.S. National Institute for Occupational Safety and Health (NIOSH) N95 classification of air filtration, meaning that it filters at least 95% of airborne particles. This standard does not require that the respirator be resistant to oil; another standard, P95, adds that requirement. The N95 type is the most common particulate-filtering facepiece respirator. It is an example of a mechanical filter respirator, which provides protection against particulates but not against gases or vapors. An authentic N95 respirator is marked with the text "NIOSH" or the NIOSH logo, the filter class ("N95"), a "TC" approval number of the form XXX-XXXX, the approval number must be listed on the NIOSH Certified Equipment List (CEL) or the NIOSH Trusted-Source page, and it must have headbands instead of ear loops.'
     },
     {
         name: 'Hazardous material suit',
         AKA: 'Hazmat suit',
-        // image: 'https://featuredcreature.com/wp-content/uploads/2014/02/megalobulimus-capillaceus.gif',
+        image: 'https://i.imgur.com/5JuLs68.jpg',
         origin: 'unknown',
         info: 'A hazmat suit (hazardous materials suit) is a piece of personal protective equipment that consists of an impermeable whole-body garment worn as protection against hazardous materials. Such suits are often combined with self-contained breathing apparatus (SCBA) to ensure a supply of breathable air. Hazmat suits are used by firefighters, emergency medical technicians, paramedics, researchers, personnel responding to toxic spills, specialists cleaning up contaminated facilities, and workers in toxic environments.',
     },
