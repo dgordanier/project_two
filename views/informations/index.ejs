@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="stylesheet" href="../public/css/styles.css">
-</head>
+<%- include('../partials/header') %>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">HDD Medsupply</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
+            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
+            <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
+            <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
+    
+          </ul>
+    </nav>
+  
 <main>
     <h1 class="information-header">Information about our products</h1>
     <a href="/products">Back to Products</a>
@@ -14,7 +19,7 @@
     <div class="information-div">
         <% informations.forEach((information, i) => { %>
             <div class="informationParade">
-                <h4>Product Name: <%= information.name %></h4>
+                <h4><%= information.name %></h4>
                     <div class="card-content">
                         <h5>Also Known as: <%= information.AKA %> </h5> <h5>Origin: <%= information.origin %> </h5>
                         <h5>Information</h5>
@@ -31,4 +36,7 @@
         <p>Thanks for visiting our website</p>
         <p>This company was founded by Hasan, Denzel, and David in 2021.</p>  
 </main>
+</body>
 </html>
+
+<%- include('../partials/footer') %>
