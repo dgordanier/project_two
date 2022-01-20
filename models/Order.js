@@ -17,7 +17,7 @@ const orderSchema = new Schema (
     {
         name: {type: String, required: true},
         email: {type: String, required: true},
-        street: {type: String, reuired: true},
+        street: {type: String, required: true},
         unit: {type: String},
         city: {type: String, required: true},
         state: {type: String, minlength: 2, maxlength: 2, uppercase: true},

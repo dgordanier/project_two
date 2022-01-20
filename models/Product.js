@@ -7,7 +7,8 @@ const productSchema = new Schema (
         price: {type: Number},
         description: {type: String},
         imageURL: {type: String},
-        // items: [itemSchema]
+        isAddedToOrder: {type: Boolean, default: false}
+
     },
     {
         timestamps: true,
