@@ -16,14 +16,14 @@ const informations = [
         info: 'William Stewart Halsted, The Johns Hopkins Hospitals first surgeon in chief, is widely credited as the first to develop and introduce rubber surgical gloves in the United States. That was in 1894, five years after the institution opened.Now, in an effort to make medical care safer for patients and health care workers, The Johns Hopkins Hospital has become the first major medical institution to become “latex safe” by ending all use of latex gloves and almost all medical latex products.',
     },
     {
-        name: 'N95 respirator',
+        name: 'N95 Respirator',
         AKA: 'KN95',
         image: 'https://i.imgur.com/EiKLrcX.jpg',
         origin: 'United States',
         info: 'An N95 filtering facepiece respirator, commonly abbreviated N95 respirator is a particulate-filtering facepiece respirator that meets the U.S. National Institute for Occupational Safety and Health (NIOSH) N95 classification of air filtration, meaning that it filters at least 95% of airborne particles. This standard does not require that the respirator be resistant to oil; another standard, P95, adds that requirement. The N95 type is the most common particulate-filtering facepiece respirator. It is an example of a mechanical filter respirator, which provides protection against particulates but not against gases or vapors. An authentic N95 respirator is marked with the text "NIOSH" or the NIOSH logo, the filter class ("N95"), a "TC" approval number of the form XXX-XXXX, the approval number must be listed on the NIOSH Certified Equipment List (CEL) or the NIOSH Trusted-Source page, and it must have headbands instead of ear loops.'
     },
     {
-        name: 'Hazardous material suit',
+        name: 'Hazardous Material Suit',
         AKA: 'Hazmat suit',
         image: 'https://i.imgur.com/5JuLs68.jpg',
         origin: 'unknown',
@@ -32,7 +32,7 @@ const informations = [
     {
         name: 'Oxygen Cylinder',
         AKA: 'Oxygen',
-        //image: 'https://media.istockphoto.com/photos/textile-cone-shell-picture-id157582260?k=20&m=157582260&s=612x612&w=0&h=7MN1yTBoW0vNO20WNEK9ksNJ7KTceGObuZKw_ZVtWRU=',
+        
         origin: 'England',
         info: "An oxygen tank is an oxygen storage vessel, which is either held under pressure in gas cylinders, or as liquid oxygen in a cryogenic storage tank.",
     },
