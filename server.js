@@ -16,6 +16,7 @@ const routes = require("./routes");
 /* ====== Instanced Module  ====== */
 // Create the Express app
 const app = express();
+const PORT = process.env.PORT || 5000;
 // returns an object that is our server
 
 	
@@ -44,7 +45,7 @@ app.use((req, res, next) => {
 
 
 /* ====== System Variables  ====== */
-const PORT = 4000; // full caps signify a config variable
+// full caps signify a config variable
 
 /* ====== App Configuration  ====== */
 // app.set

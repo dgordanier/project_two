@@ -116,6 +116,11 @@
   "bugs": {
     "url": "https://github.com/dgordanier/project_two/issues"
   },
+
+
   "homepage": "https://github.com/dgordanier/project_two#readme",
-  "devDependencies": {}
-}
+
+    "mongoose": "^6.1.7",
+    "node": "^17.3.1"
+  }
+

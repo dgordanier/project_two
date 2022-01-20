@@ -44,21 +44,12 @@ const edit = (req, res) => {
 
 //update order function
 const update = (req, res) => {
-  db.Order.findByIdAndUpdate(
+  db.Order.findOneAndUpdate(
         req.params.id,
         
         {
           $set: {
-            name: req.body.name,
-            email: req.body.email,
-            street: req.body.street,
-            unit: req.body.unit,
-            city: req.body.city,
-            state: req.body.state,
-            zip: req.body.zip,
-            cardNumber: req.body.cardNumber,
-            exp: req.body.exp,
-            cvv: req.body.cvv,
+            ...req.body,
           },
         },
         {new: true},
