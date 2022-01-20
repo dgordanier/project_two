@@ -2,7 +2,7 @@
 <body>
     <nav>
       <div class="nav-wrapper deep-purple lighten-1">
-          <a href="#" class="brand-logo" id="headtitle">HDD MedSupply</a>
+          <a href="/products" class="brand-logo" id="headtitle">HDD MedSupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
             <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
@@ -24,7 +24,7 @@
                 <div class="container">
                 <div class="row">
                 <div class="card horizontal">
-                        <a class="btn-floating halfway-fab waves-effect waves-light red" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
+                        <a class="btn-floating halfway-fab waves-effect waves-light purple" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
                     
                     <div class="card-content">
                         <h5>Order Number</h5>
@@ -78,7 +78,7 @@
                             </div>
             
                             <div class="input-field col s3">
-                                <h6>Expiration: <%= order.exp; %></h6>
+                                <h6>Expiration: <%= order.exp %></h6>
                             </div>
             
                             <div class="input-field col s3">
