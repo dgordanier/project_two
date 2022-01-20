@@ -4,17 +4,20 @@
 
 #information-header{
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 #knowledge {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 #name {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 #info {
     color: black;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #card {
