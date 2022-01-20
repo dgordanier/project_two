@@ -2,4 +2,18 @@
     display: flexbox;
 }
 
+#information-header{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#knowledge {
+    text-align: center;
+}
+#name {
+    text-align: center;
+}
 
+#card {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}

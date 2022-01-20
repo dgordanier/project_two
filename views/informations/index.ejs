@@ -13,14 +13,14 @@
     </nav>
   
 <main>
-    <h1 class="information-header">Information about our products</h1>
+    <h1 id="information-header">Information about our products</h1>
+    <h3 id="knowledge">Knowledge is power</h3>
     <a href="/products">Back to Products</a>
-    <h1>Knowledge is power</h1>
     <div class="information-div">
         <% informations.forEach((information, i) => { %>
-            <div class="informationParade">
-                <h4><%= information.name %></h4>
-                    <div class="card-content">
+            <div id="informationParade">
+                <h4 id="name"><%= information.name %></h4>
+                    <div class="card-content" id="card">
                         <h5>Also Known as: <%= information.AKA %> </h5> <h5>Origin: <%= information.origin %> </h5>
                         <h5>Information</h5>
                         <p><%= information.info %> </p>

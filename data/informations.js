@@ -6,7 +6,7 @@ const informations = [
         AKA: 'medical face masks',
         image: 'https://i.imgur.com/NnF9t3x.jpg',
         origin: 'Europe',
-        info: 'Face masks for use in surgery were developed in Europe by several physicians, including Jan Mikulicz-Radecki at the University of Breslau and Paul Berger in Paris, in the late nineteenth century, as a result of increasing awareness of germ theory and the importance of antiseptic procedures in medicine.[40] In response to a pneumonic plague in Manchuria and Mongolia in 1910, Chinese-Malaysian epidemiologist Dr. Wu Lien-teh greatly improved on the designs he had seen in Europe to develop a face mask of layers of gauze and cotton that would protect both the wearer and others. Modern surgical masks began to be used in the 1960s. Their adoption caused cloth facemasks, which had been used since the late 19th century, to completely fall out of use in the developed world.[41][42] However, cloth masks and surgical masks both continued to be used in countries',
+        info: 'Face masks for use in surgery were developed in Europe by several physicians, including Jan Mikulicz-Radecki at the University of Breslau and Paul Berger in Paris, in the late nineteenth century, as a result of increasing awareness of germ theory and the importance of antiseptic procedures in medicine. In response to a pneumonic plague in Manchuria and Mongolia in 1910, Chinese-Malaysian epidemiologist Dr. Wu Lien-teh greatly improved on the designs he had seen in Europe to develop a face mask of layers of gauze and cotton that would protect both the wearer and others. Modern surgical masks began to be used in the 1960s. Their adoption caused cloth facemasks, which had been used since the late 19th century, to completely fall out of use in the developed world. However, cloth masks and surgical masks both continued to be used in countries',
     },
     {
         name: 'Medical Gloves',
@@ -20,7 +20,7 @@ const informations = [
         AKA: 'KN95',
         // image: 'https://www.aquariadise.com/wp-content/uploads/2020/03/rabbit-snail.jpg',
         origin: 'United States',
-        info: 'An N95 filtering facepiece respirator, commonly abbreviated N95 respirator is a particulate-filtering facepiece respirator that meets the U.S. National Institute for Occupational Safety and Health (NIOSH) N95 classification of air filtration, meaning that it filters at least 95% of airborne particles. This standard does not require that the respirator be resistant to oil; another standard, P95, adds that requirement. The N95 type is the most common particulate-filtering facepiece respirator.[2] It is an example of a mechanical filter respirator, which provides protection against particulates but not against gases or vapors.[3] An authentic N95 respirator is marked with the text "NIOSH" or the NIOSH logo, the filter class ("N95"), a "TC" approval number of the form XXX-XXXX, the approval number must be listed on the NIOSH Certified Equipment List (CEL)[4] or the NIOSH Trusted-Source page,[5] and it must have headbands instead of ear loops.'
+        info: 'An N95 filtering facepiece respirator, commonly abbreviated N95 respirator is a particulate-filtering facepiece respirator that meets the U.S. National Institute for Occupational Safety and Health (NIOSH) N95 classification of air filtration, meaning that it filters at least 95% of airborne particles. This standard does not require that the respirator be resistant to oil; another standard, P95, adds that requirement. The N95 type is the most common particulate-filtering facepiece respirator. It is an example of a mechanical filter respirator, which provides protection against particulates but not against gases or vapors. An authentic N95 respirator is marked with the text "NIOSH" or the NIOSH logo, the filter class ("N95"), a "TC" approval number of the form XXX-XXXX, the approval number must be listed on the NIOSH Certified Equipment List (CEL) or the NIOSH Trusted-Source page, and it must have headbands instead of ear loops.'
     },
     {
         name: 'Hazardous material suit',
@@ -41,7 +41,7 @@ const informations = [
         AKA: 'Medical gown',
         // image: 'https://inaturalist-open-data.s3.amazonaws.com/photos/11315809/large.jpg',
         origin: 'unknown',
-        info: 'lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean.',
+        info: 'Lab coat, is a knee-length overcoat or smock worn by professionals in the medical field or by those involved in laboratory work. The coat protects their street clothes and also serves as a simple uniform. The garment is made from white or light-colored cotton, linen, or cotton polyester blend, allowing it to be washed at high temperature and making it easy to see if it is clean.',
     },
     
 ]
