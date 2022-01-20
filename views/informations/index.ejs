@@ -7,24 +7,28 @@
     <title>Information</title>
     <link rel="stylesheet" href="../public/css/styles.css">
 </head>
-<body>
+<main>
     <h1 class="information-header">Information about our products</h1>
-    <a href="/products">Back to products</a>
-    <h1>Information</h1>
+    <a href="/products">Back to Products</a>
+    <h1>Knowledge is power</h1>
     <div class="information-div">
         <% informations.forEach((information, i) => { %>
             <div class="informationParade">
-                <h4><%= information.name %></h4>
-                <!-- <a href="/informations/<%= i %>"> -->
-                    <img src=<%= information %>></img>
+                <h4>Product Name: <%= information.name %></h4>
                     <div class="card-content">
                         <h5>Also Known as: <%= information.AKA %> </h5> <h5>Origin: <%= information.origin %> </h5>
+                        <h5>Information</h5>
                         <p><%= information.info %> </p>
-                        
-                      </div>
+                        <br>
+                    </div>
+                    
                 </a>
+                
             </div>
         <% }) %>
-        </div>  
-</body>
+        </div>
+        
+        <p>Thanks for visiting our website</p>
+        <p>This company was founded by Hasan, Denzel, and David in 2021.</p>  
+</main>
 </html>
