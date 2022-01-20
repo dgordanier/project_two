@@ -14,7 +14,7 @@
 //     .catch((err) => console.log(`MongoDB connection failed Error: ${err} `));
 
 
-//     Product.insertMany(
+//     Product.updateMany(
 //         [
 //             {
 //                 name: "COVID Test Kit",
@@ -47,4 +47,4 @@
 //                 imageURL: "https://i.imgur.com/5JuLs68.jpg",
 //             },
 //         ]
-//     )
+    )

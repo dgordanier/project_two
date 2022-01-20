@@ -71,6 +71,22 @@ const destroy = (req, res) => {
   });
 };
 
+const select = (req, res) => {
+  db.Product.findByIdAndUpdate(req.params.id, 
+    {
+      $set: {
+        isAddedToOrder: true,
+      },
+  },
+  {new: true},
+  (err, updatedList) => {
+    if(err) return res.send(err);
+    return res.redirect('/products/');
+  }
+);
+
+};
+
 
 
 
@@ -80,5 +96,6 @@ module.exports = {
   create,
   edit,
   update,
-  destroy, 
+  destroy,
+  select,
 }
