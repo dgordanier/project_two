@@ -12,8 +12,15 @@
 #name {
     text-align: center;
 }
+#info {
+    color: black;
+    text-align: center;
+}
 
 #card {
     color: blue;
     font-family: 'Courier New', Courier, monospace;
+}
+#end {
+    text-align: center;
 }

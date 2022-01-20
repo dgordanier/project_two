@@ -20,9 +20,10 @@
         <% informations.forEach((information, i) => { %>
             <div id="informationParade">
                 <h4 id="name"><%= information.name %></h4>
-                    <div class="card-content" id="card">
+                <
+                    <div id="card">
                         <h5>Also Known as: <%= information.AKA %> </h5> <h5>Origin: <%= information.origin %> </h5>
-                        <h5>Information</h5>
+                        <h5 id=info>Information </h5>
                         <p><%= information.info %> </p>
                         <br>
                     </div>
@@ -33,8 +34,10 @@
         <% }) %>
         </div>
         
+        <div id="end">
         <p>Thanks for visiting our website</p>
         <p>This company was founded by Hasan, Denzel, and David in 2021.</p>  
+        </div>
 </main>
 </body>
 </html>
