@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+        <div class="nav-wrapper deep-purple lighten-1">
+          <a href="/products" class="brand-logo">HDD Medsupply</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
             <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
@@ -71,12 +71,12 @@
                         <label for="zip" class="active">Security Code/CVV</label>
                     </div>
                                
-              </div>
+                </div>
 
-            <button class="btn waves-effect waves-light" type="submit" value="Update" action="/orders/<%= order._id %>?_method=PUT" method="POST">Submit
-                <i class="material-icons right">send</i>
-            </button>
-        </div>          
+                <button class="btn waves-effect waves-light grey" type="submit" value="Update" action="/orders/<%= order._id %>?_method=PUT" method="POST">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+                     
             </form>
         </div>
     </div>
@@ -84,7 +84,7 @@
     <div class="input-field">
         <div class="row">
             <form class="col s12" action="/orders/<%= order._id %>?_method=DELETE" method="POST" type="submit" value="Delete">
-                <button class="btn waves-effect waves-light">Delete
+                <button class="btn waves-effect waves-light grey">Delete
                     <i class="material-icons right">delete_forever</i>
                 </button>
             </form>

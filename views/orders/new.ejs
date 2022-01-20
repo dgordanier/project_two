@@ -2,8 +2,8 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+        <div class="nav-wrapper deep-purple lighten-1">
+          <a href="/products" class="brand-logo">HDD Medsupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
             <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
@@ -16,79 +16,81 @@
     <h3>Create Order</h3>
 
     <div class="input-field">
-    <div class="row">
-        
-        <form class="col s12" action="/orders" method="POST">
-            <h5>Name</h5>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="full_name" type="text" name="name">
-                    <label for="full_name" class="active">Full Name</label>
-                </div>
-            </div>    
+        <div class="row">
+            
+            <form class="col s12" action="/orders" method="POST">
+                <h5>Name</h5>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="full_name" type="text" name="name">
+                        <label for="full_name" class="active">Full Name</label>
+                    </div>
+                </div>    
 
-            <h5>Email</h5>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="email" type="text" name="email">
-                    <label for="email" class="active">example@website.com</label>
+                <h5>Email</h5>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" name="email">
+                        <label for="email" class="active">example@website.com</label>
+                    </div>
                 </div>
+
+                <h5>Address</h5>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="street" type="text" name="street">
+                        <label for="street" class="active">Street</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="unit" type="text" name="unit">
+                        <label for="unit" class="active">Unit/Apt (optional)</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="city" type="text" name="city">
+                        <label for="city" class="active">City</label>
+                    </div>
+
+                    <div class="input-field col s2">
+                        <input id="state" type="text" name="state">
+                        <label for="state" class="active">State</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input id="zip" type="text" name="zip">
+                        <label for="zip" class="active">Zip Code</label>
+                    </div>
+                </div>
+
+                <h5>Payment Information</h5>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="cardNumber" type="number" name="cardNumber">
+                        <label for="cardNumber" class="active">Card Number</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <input id="exp" type="text" name="exp">
+                        <label for="exp" class="active">Expiration</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <input id="cvv" type="number" name="cvv">
+                        <label for="zip" class="active">CVV</label>
+                    </div>
+                </div>
+
             </div>
+            
 
-            <h5>Address</h5>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="street" type="text" name="street">
-                    <label for="street" class="active">Street</label>
-                </div>
+                <button class="btn waves-effect waves-light grey" type="submit" action="/orders" method="POST">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            
+            </form>
 
-                <div class="input-field col s6">
-                    <input id="unit" type="text" name="unit">
-                    <label for="unit" class="active">Unit/Apt (optional)</label>
-                </div>
-
-                <div class="input-field col s6">
-                    <input id="city" type="text" name="city">
-                    <label for="city" class="active">City</label>
-                </div>
-
-                <div class="input-field col s2">
-                    <input id="state" type="text" name="state">
-                    <label for="state" class="active">State</label>
-                </div>
-
-                <div class="input-field col s4">
-                    <input id="zip" type="text" name="zip">
-                    <label for="zip" class="active">Zip Code</label>
-                </div>
-            </div>
-
-            <h5>Payment Information</h5>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="cardNumber" type="number" name="cardNumber">
-                    <label for="cardNumber" class="active">Card Number</label>
-                </div>
-
-                <div class="input-field col s3">
-                    <input id="exp" type="text" name="exp">
-                    <label for="exp" class="active">Expiration</label>
-                </div>
-
-                <div class="input-field col s3">
-                    <input id="cvv" type="number" name="cvv">
-                    <label for="zip" class="active">CVV</label>
-                </div>
-            </div>
-           
-
-            <button class="btn waves-effect waves-light" type="submit" action="/orders" method="POST">Submit
-                <i class="material-icons right">send</i>
-            </button>
-          
-        </form>
-
-    </div>
+        </div>
     </div>
 </main>
 
