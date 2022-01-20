@@ -10,6 +10,14 @@
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+#information {
+    border:3px; 
+    border-style:solid; 
+    border-color:rgb(91, 94, 179); 
+    padding: 3em;
+}
+
+
 #name {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
