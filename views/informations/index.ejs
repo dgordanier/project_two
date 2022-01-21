@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">HDD Medsupply</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
+            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
+            <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
+            <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
+    
+          </ul>
+    </nav>
+  
+<main>
+    <h1 id="information-header">Information about our products</h1>
+    <h3 id="knowledge">Knowledge is power</h3>
+    <a href="/products">Back to Products</a>
+    <div id="information">
+        <% informations.forEach((information, i) => { %>
+            <div id="informationParade">
+                <h4 id="name"><%= information.name %></h4>
+                <img id="img" src="<%= information.image %> ">
+                    <div id="card">
+                        <h5 id=info>Description </h5>
+                        <h5>Also Known as: <%= information.AKA %> </h5> <h5>Origin: <%= information.origin %> </h5>
+                        <p><%= information.info %> </p>
+                        <br>
+                    </div>
+                    
+                </a>
+                
+            </div>
+        <% }) %>
+        </div>
+        
+        <div id="end">
+        <p>Thanks for visiting our website</p>
+        <p>This company was founded by Hasan, Denzel, and David in 2021.</p>  
+        </div>
+</main>
+</body>
+</html>
+
+<%- include('../partials/footer') %>

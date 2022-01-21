@@ -2,6 +2,52 @@
     display: flexbox;
 }
 
+
+#information-header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#knowledge {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#information {
+    border:3px; 
+    border-style:solid; 
+    border-color:rgb(91, 94, 179); 
+    padding: 3em;
+}
+
+
+#name {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#info {
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#card {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+#end {
+    text-align: center;
+}
+
+#img {
+    
+    width: 20%;
+    margin-left: 40%;
+    position: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+  
+
 #productcards{
     font-size: 15px;
 }
@@ -14,6 +60,8 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 .page-footer {
     margin-top: 20%;
 }
+

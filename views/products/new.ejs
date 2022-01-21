@@ -3,52 +3,65 @@
 <body>
     <nav>
       <div class="nav-wrapper deep-purple lighten-1">
-          <a href="#" class="brand-logo" id="headtitle">HDD MedSupply</a>
+          <a href="/products" class="brand-logo" id="headtitle">HDD MedSupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
+
 
           </ul>
     </nav>
 
 <main>
+
   <div class="row">
     <h3 class="center" id="headtitle">Add A New Product</h3>
     </div>
 
     <div class="input-field">
-    <div class="row">
-        <form class="col s12" action="/products" method="POST">
-          <div class="row">
 
+    <div class="row">
+
+        <form class="col s12" action="/products" method="POST">
+          
+          <div class="row">
             <div class="input-field col s6">
+              <h5>Product Name</h5>
               <input placeholder="" id="first_name" type="text" name="name">
-              <label for="first_name" class="active">Product Name</label>
+              <label for="first_name" class="active"></label>
             </div>
             
-                <div class="input-field col s6">
+              <div class="input-field col s6">
+                <h5>Price</h5>
                 <input id="last_name" type="text" name="price">
-                <label for="last_name" class="active">Product Price</label>
+                <label for="last_name" class="active"></label>
                 </div>
             </div>
-            
+          </div>
+
               <div class="row">
                 <div class="input-field col s12">
+                  <h5>Description</h5>
                     <input id="last_name" type="text" name="description">
-                  <label for="textarea1" class="active">Product Description</label>
+                  <label for="textarea1" class="active"></label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s12">
+                <h5>Image URL</h5>
                     <input id="last_name" type="text" name="imageURL">
-                  <label for="textarea1" class="active">Image URL</label>
+                  <label for="textarea1" class="active"></label>
                 </div>
               </div>
            
 
-            <button class="btn waves-effect waves-light" type="submit" >Submit
+            <div class="row">
+              <div class="col s12">
+            <button class="btn waves-effect waves-light grey" type="submit" >Submit
                 <i class="material-icons right">send</i>
             </button>
+          </div>
+        </div>
           
         </form>
       </div>
