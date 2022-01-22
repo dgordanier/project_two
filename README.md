@@ -27,4 +27,4 @@
 
 
 ### **ERD** (created by David)
-![ERD drawio](https://user-images.githubusercontent.com/93225314/149642110-6fc29fd1-5c16-4fbd-ba88-6b4d402ab0fd.png)
+<img width="611" alt="Screen Shot 2022-01-21 at 5 57 40 PM" src="https://user-images.githubusercontent.com/88109038/150620409-3b6a35e0-66da-4e94-9876-90d86c4a099a.png">
