@@ -79,12 +79,12 @@ const select = (req, res) => {
       },
   },
   {new: true},
+
   (err, updatedList) => {
     if(err) return res.send(err);
     return res.redirect('/products/');
   }
 );
-
 };
 
 
