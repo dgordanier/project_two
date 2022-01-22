@@ -47,4 +47,4 @@
 //                 imageURL: "https://i.imgur.com/5JuLs68.jpg",
 //             },
 //         ]
-    )
+//)
