@@ -5,11 +5,11 @@
 
 #information-header{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Cardo', serif;
 }
 #knowledge {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 #information {
     border:3px; 
@@ -21,17 +21,17 @@
 
 #name {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 #info {
     color: black;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #card {
     color: blue;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 #end {
     text-align: center;
