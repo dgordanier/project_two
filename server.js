@@ -5,6 +5,8 @@ require("dotenv").config();
 const express = require('express');
 const session = require('express-session');
 const methodOverride = require('method-override');
+//newcode by Hasan
+const bodyParser = require('body-parser');
 
 /* ====== Internal Modules  ====== */
 // Required Internal Modules
@@ -21,6 +23,9 @@ const PORT = process.env.PORT || 5000;
 /* ====== Middleware  ====== */ 
 //(app.use)
 //body data
+//newcode by Hasan
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.urlencoded({extended: true}));
 //method override
 app.use(methodOverride("_method"));
@@ -32,11 +37,12 @@ app.use((req, res, next) => {
 	next();
 });
 //session middleware
-app.use(session({
-	secret: 'secret-key',
-	resave: false,
-	saveUninitialized: false,
-}));
+// app.use(session({
+// 	secret: 'secret-key',
+// 	resave: false,
+// 	saveUninitialized: false,
+// }));
+
 
 /* ====== System Variables  ====== */
 // full caps signify a config variable
@@ -58,6 +64,8 @@ app.get((req, res) => {
 
 //Internal Routes
 app.use("/products", routes.products);
+app.use("/informations", require("./routes/informations"));
+
 
 //Checkout
 app.use("/orders", routes.orders);
