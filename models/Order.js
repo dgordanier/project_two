@@ -1,18 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const cartSchema = new Schema (
-    {
-        name: {type: String},
-        price: {type: Number},
-        description: {type: String},
-        imageURL: {type: String}
-    },
-    {
-        timestamps: true,
-    }
-)
-
 const orderSchema = new Schema (
     {
         name: {type: String, required: true},
@@ -25,7 +13,6 @@ const orderSchema = new Schema (
         cardNumber: {type: Number, requried: true},
         exp: {type: Date, requried: true},
         cvv: {type: Number, requried: true},
-        cart: [cartSchema],
     },
     {
         timestamps: true,
