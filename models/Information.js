@@ -1,10 +1,8 @@
-// const informationDb = require('../data/informations')
+const informationDb = require('../data/informations')
 
-// const getAll = () => {
-//     return informationDb.informations;
-// }
-
-
+const getAll = () => {
+    return informationDb.informations;
+}
 
 
 
@@ -23,7 +21,9 @@
 
 
 
-// module.exports = {
-//     getAll,
-// }
+
+
+module.exports = {
+    getAll,
+}
 
