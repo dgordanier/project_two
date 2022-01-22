@@ -28,3 +28,15 @@
 
 ### **ERD** (created by David)
 <img width="611" alt="Screen Shot 2022-01-21 at 5 57 40 PM" src="https://user-images.githubusercontent.com/88109038/150620409-3b6a35e0-66da-4e94-9876-90d86c4a099a.png">
+
+### Future Plans
+#### Phase 2
+ * Improve backend relationship between product and order databases
+ * Render products in edit order page and pending order page
+ * Create ability to review products
+
+Link to project hosted on Heroku:
+http://hdd-medsupply.herokuapp.com/products
+
+### Git repo
+https://github.com/dgordanier/project_two
