@@ -14,62 +14,62 @@
     </nav>
 
 <main>
-         
+    <h3 class="center" id="headtitle">Order Number: <%= order._id%></h3>    
     <div class="input-field">
         <div class="row">
             <form class="col s12" action="/orders/<%= order._id %>?_method=PUT" method="POST">
                 <div class="row">
                     <h5>Name</h5>
                     <div class="input-field col s12">
-                        <input placeholder="Enter new name" id="full_name" type="text" name="name" value="<%= order.name %>">
+                        <input type="text" name="name" value="<%= order.name %>">
                         <label for="full_name" class="active">Full Name</label>
                     </div>
 
                     <h5>Email</h5>
                     <div class="input-field col s12">
-                        <input id="email" type="text" name="email" value="<%= order.email %>">
+                        <input type="text" name="email" value="<%= order.email %>">
                         <label for="email" class="active">example@domain.com</label>
                     </div>
 
                     <h5>Address</h5>
                     <div class="input-field col s6">
-                        <input id="street" type="text" name="street" value="<%= order.street %>">
+                        <input type="text" name="street" value="<%= order.street %>">
                         <label for="street" class="active">Street</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="unit" type="text" name="unit" value="<%= order.unit %>">
+                        <input type="text" name="unit" value="<%= order.unit %>">
                         <label for="unit" class="active">Unit/Apt</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="city" type="text" name="city" value="<%= order.city %>">
+                        <input type="text" name="city" value="<%= order.city %>">
                         <label for="city" class="active">City</label>
                     </div>
 
                     <div class="input-field col s2">
-                        <input id="state" type="text" name="state" value="<%= order.state %>">
+                        <input type="text" name="state" value="<%= order.state %>">
                         <label for="state" class="active">State</label>
                     </div>
 
                     <div class="input-field col s4">
-                        <input id="zip" type="text" name="zip" value="<%= order.zip %>">
+                        <input type="number" name="zip" value="<%= order.zip %>">
                         <label for="zip" class="active">Zip Code</label>
                     </div>
 
                     <h5>Payment Information</h5>
                     <div class="input-field col s6">
-                        <input placeholder="Enter new card number" id="cardNumber" type="number" name="cardNumber" value="<%= order.cardNumber %>">
+                        <input type="number" name="cardNumber" value="<%= order.cardNumber %>">
                         <label for="cardNumber" class="active">Card Number</label>
                     </div>
 
                     <div class="input-field col s3">
-                        <input placeholder="Expiration" id="exp" type="text" name="exp" value="<%= order.exp %>">
+                        <input type="number" name="exp" value="<%= order.exp %>">
                         <label for="exp" class="active">Expiration Date</label>
                     </div>
 
                     <div class="input-field col s3">
-                        <input placeholder="CVV" id="cvv" type="number" name="cvv" value="<%= order.cvv %>">
+                        <input type="number" name="cvv" value="<%= order.cvv %>">
                         <label for="zip" class="active">Security Code/CVV</label>
                     </div>                     
                 </div>

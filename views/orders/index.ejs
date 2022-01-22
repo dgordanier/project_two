@@ -7,6 +7,7 @@
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
+            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
             <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
             <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
           
@@ -24,7 +25,7 @@
 			<% } %>
 			<ul>
 				<% orders.forEach(order => { %> 
-                <div class="container" id="text">
+                <div class="container">
                 <div class="row">
                 <div class="card horizontal">
                         <a class="btn-floating halfway-fab waves-effect waves-light purple" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
