@@ -2,10 +2,11 @@
 <body>
     <nav>
       <div class="nav-wrapper deep-purple lighten-1">
-          <a href="/products" class="brand-logo" id="headtitle">HDD MedSupply</a>
+
+          <a href="" class="brand-logo" id="headtitle">HDD MedSupply</a>
+
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
-            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
             <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
             <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
           
@@ -15,13 +16,15 @@
     <main>
         
     
-      <h2 class="center">Pending Orders</h2>
+
+      <h2 class="center" id="headtitle">Pending Orders</h2>
+
 			<% if(!orders.length) { %>
 			<h5 class="center">There are no orders currently available</h5>
 			<% } %>
 			<ul>
 				<% orders.forEach(order => { %> 
-                <div class="container">
+                <div class="container" id="text">
                 <div class="row">
                 <div class="card horizontal">
                         <a class="btn-floating halfway-fab waves-effect waves-light purple" href="/orders/<%= order._id %>/edit "><i class="material-icons">edit</i></a>
