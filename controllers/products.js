@@ -74,8 +74,8 @@ const destroy = (req, res) => {
 const select = (req, res) => {
   db.Product.findByIdAndUpdate(req.params.id, 
     {
-      $push: {
-        cart: db.Product,
+      $set: {
+        isAddedToOrder: true,
       },
   },
   {new: true},

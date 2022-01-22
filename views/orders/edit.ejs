@@ -69,8 +69,7 @@
                     <div class="input-field col s3">
                         <input placeholder="CVV" id="cvv" type="number" name="cvv" value="<%= order.cvv %>">
                         <label for="zip" class="active">Security Code/CVV</label>
-                    </div>
-                               
+                    </div>                     
                 </div>
 
                 <button class="btn waves-effect waves-light grey" type="submit" value="Update" action="/orders/<%= order._id %>?_method=PUT" method="POST">Submit
