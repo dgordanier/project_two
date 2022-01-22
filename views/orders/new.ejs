@@ -8,9 +8,7 @@
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
-            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
             <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
-            <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
           </ul>
     </nav>
 
@@ -89,55 +87,6 @@
                     </div>
                 </div>
             </div>
-
-            <h2 class="center" id="headtitle">Cart</h2>
-            <div class="row"></div>
-                <% products.forEach(product => { %> 
-                    <% if(product.isAddedToOrder === true) {%>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="card horizontal">
-                                    <div class="col s12">
-                                        <div class="card-content">
-
-                                            <div class="row">                                                
-                                                <div class="col s6 m6">
-                                                    <div class="card-image">
-                                                        <img src="<%= product.imageURL %> ">
-                                                        <input readonly type="text" name="cart.imageURL" value="<%= product.imageURL %>">
-                                                        <label for="cart.name" class="active"></label>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="input-field col s6">
-                                                    <h5>Product Name</h5>
-                                                    <input readonly type="text" name="cart.name" value="<%= product.name %>">
-                                                    <label for="cart.name" class="active"></label>
-                                                </div>
-                                                
-                                                <div class="input-field col s6">
-                                                    <h5>Price</h5>
-                                                    <input readonly type="text" name="cart.price" value="<%= product.price %>">
-                                                    <label for="cart.price" class="active"></label>
-                                                </div>
-                                            </div>
-                                                
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <h5>Description</h5>
-                                                    <input readonly type="text" name="cart.description" value="<%= product.description %>">
-                                                    <label for="cart.description" class="active"></label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <% } %>                
-                <% }) %>   
             <div class="input-field">
             <div class="row">
                 <div class="col s12">
