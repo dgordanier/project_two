@@ -1,21 +1,18 @@
 <%- include('../partials/header') %>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">HDD Medsupply</a>
+        <div class="nav-wrapper deep-purple lighten-1">
+          <a href="#" class="brand-logo" id="headtitle">HDD Medsupply</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/products"><span>Home</span><i class="material-icons left">home</i></a></li>
-            <li class="active"><a href="/products/new"><span>New Product</span><i class="material-icons left">add_box</i></a></li>
-            <li class="active"><a href="/orders"><span>Orders</span><i class="material-icons left">chat</i></a></li>
-            <li class="active"><a href="/orders/new"><span>New Order</span><i class="material-icons left">add_box</i></a></li>
+      
     
           </ul>
     </nav>
   
 <main>
-    <h1 id="information-header">Information about our products</h1>
+    <h1 id="information-header" id="headtitle">Information about our products</h1>
     <h3 id="knowledge">Knowledge is power</h3>
-    <a href="/products">Back to Products</a>
     <div id="information">
         <% informations.forEach((information, i) => { %>
             <div id="informationParade">
