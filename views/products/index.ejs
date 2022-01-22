@@ -29,32 +29,44 @@
                 <div class="card horizontal">
                   <div class="card-image">
                     <img src="<%= product.imageURL %> ">
+                   
                   </div>
-                  
-                
-
                   <a class="btn-floating halfway-fab waves-effect waves-light purple right" href="/products/<%= product._id %>/edit "><i class="material-icons">edit</i></a>
-                  
                   <form class="btn-floating halfway-fab waves-effect waves-light purple left" action="/products/<%= product._id %>/add?_method=PUT" method="POST">
                     <input class="btn waves-effect waves-light" type="Submit" value="+">
                     </input>
-
-                    <form class="btn-floating halfway-fab waves-effect waves-light purple left" action="/products/<%= product._id %>/add?_method=PUT" method="POST">
-                      <input class="btn waves-effect waves-light" type="Submit" value="Deselect">
-                      </input>
-
                   </form>
+
+                  <% if (product.isAddedToOrder == true) { %> 
+                  <div class="valign-wrapper">
+                    <form class="btn halfway-fab waves-effect waves-light red" action="/products/<%= product._id %>/remove?_method=PUT" method="POST">
+                      <input class="btn waves-effect waves-light" type="Submit" value="-">
+                      </input>
+                    </form>
+                  </div>
+                 <% } else { %> 
+             
+                   <% } %> 
                   <div class="card-content">
                     <h5><%= product.name %> </h5> 
                     <i class="material-icons">attach_money</i><span id="productcards"><%= product.price %></span>
                     <p><%= product.description %> </p>
-                    
+                  
                   </div>
+
+                  <div class="container"><% if (product.isAddedToOrder == true) {  %> 
+                    <span class="badge green">Added</span>
+                    
+                    <% } else{ %> 
+                    
+                      <% } %> 
+                    </div>
                 </div>
               </div>
           </div> 
       <% }) %>
     </div>   
+    
 </section>
 
 

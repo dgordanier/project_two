@@ -83,6 +83,24 @@ const select = (req, res) => {
   (err, updatedList) => {
     if(err) return res.send(err);
     return res.redirect('/products/');
+    console.log(updatedList)
+  }
+);
+};
+
+
+const unselect = (req, res) => {
+  db.Product.findByIdAndUpdate(req.params.id, 
+    {
+      $set: {
+        isAddedToOrder: false,
+      },
+  },
+  {new: true},
+
+  (err, updatedList) => {
+    if(err) return res.send(err);
+    return res.redirect('/products/');
   }
 );
 };
@@ -98,4 +116,5 @@ module.exports = {
   update,
   destroy,
   select,
+  unselect,
 }
