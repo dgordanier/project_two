@@ -1,3 +1,4 @@
+const { Product } = require("../models");
 const db = require ("../models");
 
 // Rest Routes as a guide
@@ -22,13 +23,17 @@ const idx = (req, res) => {
 
 //new order page
 const newOrder = (req, res) => {
-  res.render("orders/new");
+    db.Product.find({}, function (err, allProducts) {
+        if (err) return res.send(err);
+        const context = {products: allProducts};
+        return res.render("orders/new", context);
+    });
 };
 
 //create order function
 const create = (req, res) => {
     db.Order.create(req.body, function(err, createdOrder) {
-      if(err) return res.send(err);
+      if (err) return res.send(err);
       return res.redirect("/orders");
     });
 };
@@ -36,7 +41,7 @@ const create = (req, res) => {
 //edit order function
 const edit = (req, res) => {
   db.Order.findById(req.params.id, (err, foundOrder) => {
-    if(err) return res.send(err);
+    if (err) return res.send(err);
     const context = {order: foundOrder};
     return res.render("orders/edit", context);
   });

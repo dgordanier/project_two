@@ -16,10 +16,12 @@
     <main>
         
     
-      <h3 class="center" id="headtitle">Pending Orders</h3>
+
+      <h2 class="center" id="headtitle">Pending Orders</h2>
+
 			<% if(!orders.length) { %>
-			<h5>There are no orders currently available</h5>
-			<% } else %>
+			<h5 class="center">There are no orders currently available</h5>
+			<% } %>
 			<ul>
 				<% orders.forEach(order => { %> 
                 <div class="container" id="text">
@@ -77,23 +79,21 @@
                             <div class="input-field col s6">
                                 <h6>Credit Card Number: <%= order.cardNumber %></h6>
                             </div>
-            
+                        
                             <div class="input-field col s3">
                                 <h6>Expiration: <%= order.exp %></h6>
                             </div>
             
                             <div class="input-field col s3">
                                 <h6>CVV: <%= order.cvv %></h6>
-                            </div>
-                             
+                            </div>        
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> 
+      </div> 
       <% }) %>   
 			</ul>
-  
-  </main>
+    </main>
 
 <%- include('../partials/footer') %>
