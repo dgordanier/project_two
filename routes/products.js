@@ -9,5 +9,6 @@ router.delete("/:id", ctrl.products.destroy);
 router.put("/:id", ctrl.products.update);
 router.get("/:id/edit", ctrl.products.edit);
 router.put("/:id/add", ctrl.products.select);
+router.put("/:id/remove", ctrl.products.unselect);
 
 module.exports = router;
